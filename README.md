@@ -1,4 +1,4 @@
-#Huffman Encoding and Decoding in C
+# Huffman Encoding and Decoding in C
 
 This repository contains an implementation of the Huffman encoding and decoding algorithms in C for Assignment 6. Huffman encoding is a widely used lossless data compression algorithm that is optimal for compressing data with a known probability distribution. The algorithm works by assigning shorter binary codes to more frequently occurring characters, resulting in efficient compression.
 
