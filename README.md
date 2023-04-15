@@ -1,27 +1,31 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Program: Huffman Encoder
-program accepts input from a file or stdin.  Each byte is represented as a symbol from the extentded ASCII Table.
-For each symbol, its occurrences throughout the whole program is counted and is put into a Priority Queue, where 
-tail -> head   is to  lowest frequency -> highest frequency.  It is then put into a tree of which its position on the tree
-is the encoded value.   The formation of the tree is inputted into the outfile.  
-Encoded value for each symbol is inputted into the outfile or stdout.  A header is inputted in the outfile, as well, 
-which one of its data containts a secret value that shows that it is encoded by this program.
-~~~~~~~~~~~~~~~~~~~~~~~~~
+# Assignment 6 - Huffman Encoding and Decoding in C
 
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Program: Huffman Decoder
-program accepts input from a file or stdin.  It reads in the first block of bytes which includes a header which one of its data contains a secret value.
-This secret value should match the Decoder's secret value or else it won't be able to decode the file.  It reads the next set of values which is the tree's formation.  It reconstructs the tree and then
-gathers the next set of values, which are the symbols.  The symbol's code is needed to traverse the tree and decode the message
-~~~~~~~~~~~~~~~~~~~~~~~~~
+This repository contains an implementation of the Huffman encoding and decoding algorithms in C for Assignment 6. Huffman encoding is a widely used lossless data compression algorithm that is optimal for compressing data with a known probability distribution. The algorithm works by assigning shorter binary codes to more frequently occurring characters, resulting in efficient compression.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Files:
-1. encode.c
-2. decode.c
-3. entropy.c
-4. defines.h
-5. header.h
+## Features
+
+- Lossless static compression using Huffman trees
+- Dynamically generated Huffman tree
+- Efficient binary representation
+- Header containing a secret value for validation
+- Easy-to-use command line interface
+- Statistics output option
+- File explanations provided
+
+## Prerequisites
+
+To build and run this project, you need to have the following installed on your machine:
+
+- C compiler (e.g., GCC or Clang)
+- Make (optional)
+
+## Repository Structure
+
+1. Makefile
+2. encode.c
+3. decode.c
+4. entropy.c
+5. defines.h
 6. node.h
 7. node.c
 8. pq.h
@@ -34,18 +38,67 @@ Files:
 15. stack.c
 16. huffman.h
 17. huffman.c
-18. Makefile
+18. DESIGN.pdf
 19. README.md (this)
-20. DESIGN.pdf
-~~~~~~~~~~~~~~~~~~~~~~~~
 
-~~~~~~~~~~~~~~~~~~~~~~~~
-How to RUN and BUILD:
--typing "make" or "make all" builds the program
--typing "make encode," "make decode", "make entropy," only builds the encode, decode, or entropy program, respectively.
-- ./encode -v -h -i <infile>  -o <outfile> are the commands for running the encode.  -v prints the statistics when encoding a file
-- -h prints on how to run the program but exits the program right away.  When infile or outfile are not supplied, stdin is substituted for input and stdout for ouput.
--./decode -v -h -i <infile> -o <outfile> are commands for decode.  Commands are the same for encode.
-- typing "make clean" removes all the binary files an .o files that were built
-- "make format" formats the .c's and .h's files
-~~~~~~~~~~~~~~~~~~~~~~~~
+## Build Instructions
+
+1. Clone the repository:
+
+git clone git@github.com:pajsimbulan/huffman.git
+
+2. Change into the project directory:
+
+cd huffman
+
+3. Compile the source files:
+
+make
+
+## Usage
+
+### Encoding
+
+To use the Huffman encoding program, run the following command:
+
+./encode -v -h -i <input_file> -o <output_file>
+
+Replace `<input_file>` with the path to the file you want to compress and `<output_file>` with the path where you want the compressed result to be saved. The `-v` flag prints the statistics when encoding a file, and the `-h` flag prints usage instructions and exits the program. If the input or output file is not supplied, stdin is used for input and stdout for output.
+
+### Decoding
+
+To use the Huffman decoding program, run the following command:
+
+./decode -v -h -i <input_file> -o <output_file>
+
+
+Replace `<input_file>` with the path to the compressed file you want to decompress and `<output_file>` with the path where you want the decompressed result to be saved. The `-v` flag prints the statistics when decoding a file, and the `-h` flag prints usage instructions and exits the program. If the input or output file is not supplied, stdin is used for input and stdout for output.
+
+### Additional Commands
+
+- `make clean`: Removes all the binary files and .o files that were built.
+- `make scan-build`: Runs a memory leak test.
+- `make format`: Formats the .c and .h files.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or create issues to report bugs or suggest improvements.
+
+
+## Screenshots 
+
+**Introduction**
+<img src="./screenshots/huffman_intro.jpg"  alt="img" />
+<br /><br />
+
+**Encoding Instructions**
+<img src="./screenshots/huffman_encoding_help.jpg"  alt="img" />
+<br /><br />
+
+**Decoding Instructions**
+<img src="./screenshots/huffman_decoding_help.jpg"  alt="img" />
+<br /><br />
+
+**Huffman Encoding + Decoding Results**
+<img src="./screenshots/huffman_results.jpg"  alt="img" />
+<br /><br />
