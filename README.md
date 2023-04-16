@@ -83,9 +83,9 @@ Replace `<input_file>` with the path to the compressed file you want to decompre
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or create issues to report bugs or suggest improvements.
+<br /><br />
 
-
-## Screenshots 
+# Screenshots 
 
 **Introduction**
 <img src="./screenshots/huffman_intro.jpg"  alt="img" />
@@ -102,3 +102,6 @@ Contributions are welcome! Please feel free to submit pull requests or create is
 **Huffman Encoding + Decoding Results**
 <img src="./screenshots/huffman_results.jpg"  alt="img" />
 <br /><br />
+
+# License
+This project is open-source and available under the MIT License.
