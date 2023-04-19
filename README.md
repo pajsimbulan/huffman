@@ -44,33 +44,37 @@ To build and run this project, you need to have the following installed on your 
 ## Build Instructions
 
 1. Clone the repository:
-
+```sh
 git clone git@github.com:pajsimbulan/huffman.git
+```
 
 2. Change into the project directory:
-
+```sh
 cd huffman
+```
 
 3. Compile the source files:
-
+```sh
 make
+```
 
 ## Usage
 
 ### Encoding
 
 To use the Huffman encoding program, run the following command:
-
+```sh
 ./encode -v -h -i <input_file> -o <output_file>
+```
 
 Replace `<input_file>` with the path to the file you want to compress and `<output_file>` with the path where you want the compressed result to be saved. The `-v` flag prints the statistics when encoding a file, and the `-h` flag prints usage instructions and exits the program. If the input or output file is not supplied, stdin is used for input and stdout for output.
 
 ### Decoding
 
 To use the Huffman decoding program, run the following command:
-
+```sh
 ./decode -v -h -i <input_file> -o <output_file>
-
+```
 
 Replace `<input_file>` with the path to the compressed file you want to decompress and `<output_file>` with the path where you want the decompressed result to be saved. The `-v` flag prints the statistics when decoding a file, and the `-h` flag prints usage instructions and exits the program. If the input or output file is not supplied, stdin is used for input and stdout for output.
 
@@ -87,19 +91,19 @@ Contributions are welcome! Please feel free to submit pull requests or create is
 
 # Screenshots 
 
-**Introduction**
+### **Introduction**
 <img src="./screenshots/huffman_intro.jpg"  alt="img" />
 <br /><br />
 
-**Encoding Instructions**
+### **Encoding Instructions**
 <img src="./screenshots/huffman_encoding_help.jpg"  alt="img" />
 <br /><br />
 
-**Decoding Instructions**
+### **Decoding Instructions**
 <img src="./screenshots/huffman_decoding_help.jpg"  alt="img" />
 <br /><br />
 
-**Huffman Encoding + Decoding Results**
+### **Huffman Encoding + Decoding Results**
 <img src="./screenshots/huffman_results.jpg"  alt="img" />
 <br /><br />
 
